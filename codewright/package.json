@@ -1,0 +1,12 @@
+{
+  "name": "codewright",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.19"
+  },
+  "scripts": {
+    "test": "node --test tests/guard.test.mjs tests/knowledge.test.mjs tests/run.test.mjs tests/runtime.test.mjs",
+    "validate": "claude plugin validate . --strict"
+  }
+}
