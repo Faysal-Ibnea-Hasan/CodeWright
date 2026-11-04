@@ -1,0 +1,13 @@
+{
+  "name": "codewright",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.19"
+  },
+  "scripts": {
+    "test": "node --test tests/guard.test.mjs tests/knowledge.test.mjs tests/run.test.mjs tests/runtime.test.mjs tests/settings.test.mjs",
+    "validate": "T=$(mktemp -d) && mkdir -p $T/skills $T/agents && cp -R skill $T/skills/codewright && for f in skill/agents/*.md; do cp $f $T/agents/codewright-$(basename $f); done && claude plugin validate $T --strict"
+  },
+  "version": "2.0.0"
+}
